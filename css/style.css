@@ -78,6 +78,13 @@ html{
   /*下線矢印をテキストに合わせてうまい具合にはめる*/
   margin: -10px -10px 0 -25px;
 }
+nav ul div{
+  display: flex;
+  margin-top: 10px;
+}
+nav ul div img{
+  width: 30px;
+}
 
 
 h1{
