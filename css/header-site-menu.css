@@ -1,0 +1,84 @@
+/* ハンバーガーメニューCSS */
+@media(max-width:800px){
+
+
+  .header-site-menu ul{
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .header-inner{
+    position: relative;
+  }
+ .header-site-menu{
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  z-index: 100;
+  display: none;
+  }
+
+.header-site-menu.is-show{
+  display: block;
+
+}
+
+.toggle-menu-button {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-menu-button::before,
+.toggle-menu-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  transition: transform 0.3s;
+}
+
+.toggle-menu-button::before {
+  top: 0;
+}
+
+.toggle-menu-button::after {
+  bottom: 0;
+}
+
+.toggle-menu-button span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  transform: translateY(-50%);
+  transition: opacity 0.3s;
+}
+  /* ここでバッテンの形にする */
+.toggle-menu-button.is-active::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.toggle-menu-button.is-active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.toggle-menu-button.is-active span {
+  opacity: 0;
+}
+}
