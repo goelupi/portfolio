@@ -7,7 +7,7 @@ const observer = new IntersectionObserver((entries) => {
   observer.unobserve(entry.target); // 一度発火したら監視解除 
   }
    }); 
-  }, { threshold: 0.3 }); 
+  }, { threshold: 0.1 }); 
   
   const elements = document.querySelectorAll('.animate'); 
   elements.forEach((el) => observer.observe(el));

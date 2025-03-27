@@ -419,5 +419,9 @@ display: none;
 #aboutme .info2{
 flex-direction: column;
 }
+.news{
+  flex-direction: column;
+  align-items: center;
+}
 }
   
